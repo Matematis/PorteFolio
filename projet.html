@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet</title>
+    <link rel="stylesheet" href="Fichier.css">
+    <style>
+        body.projet {
+            background: #f7faf7;
+        }
+        main {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 2rem 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .projet-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(15,128,4,0.08);
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: box-shadow 0.3s, transform 0.3s;
+            border-left: 6px solid var(--projet);
+        }
+        .projet-card:hover {
+            box-shadow: 0 8px 32px rgba(15,128,4,0.18);
+            transform: translateY(-6px) scale(1.02);
+        }
+        .projet-card h2 {
+            color: var(--projet);
+            margin-bottom: 0.7rem;
+            font-size: 1.4rem;
+        }
+        .projet-card a {
+            margin-top: 1rem;
+            background: var(--projet);
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+            box-shadow: 0 2px 8px rgba(15,128,4,0.10);
+        }
+        .projet-card a:hover {
+            background: #0a5c02;
+        }
+        @media (max-width: 700px) {
+            main {
+                grid-template-columns: 1fr;
+                padding: 1rem 0.5rem;
+            }
+            .projet-card {
+                padding: 1.2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="projet">
+
+<header>
+    <h1>Projet</h1>
+    <p>Découvrez mes projets et réalisations</p>
+</header>
+
+<nav>
+    <a href="Index.html" class="presentation">Présentation</a>
+    <a href="projet.html" class="projet">Projet</a>
+    <a href="C1.html" class="competence1">Compétence 1</a>
+    <a href="C2.html" class="competence2">Compétence 2</a>
+    <a href="C3.html" class="competence3">Compétence 3</a>
+    <a href="C4.html" class="competence4">Compétence 4</a>
+    <a href="C5.html" class="competence5">Compétence 5</a>
+    <a href="C6.html" class="competence6">Compétence 6</a>
+</nav>
+
+<main>
+    <div class="projet-card" style="border-left-color: var(--competence1);">
+        <h2 style="color: var(--competence1);">Projet 1</h2>
+        <a href="projet/projet1.html" style="background: var(--competence1);">Voir le projet 1</a>
+    </div>
+    <div class="projet-card" style="border-left-color: var(--competence2);">
+        <h2 style="color: var(--competence2);">Projet 2</h2>
+        <a href="projet/projet2.html" style="background: var(--competence2);">Voir le projet 2</a>
+    </div>
+    <div class="projet-card" style="border-left-color: var(--competence3);">
+        <h2 style="color: var(--competence3);">Projet 3</h2>
+        <a href="projet/projet3.html" style="background: var(--competence3);">Voir le projet 3</a>
+    </div>
+    <div class="projet-card" style="border-left-color: var(--competence4);">
+        <h2 style="color: var(--competence4);">Projet 4</h2>
+        <a href="projet/projet4.html" style="background: var(--competence4);">Voir le projet 4</a>
+    </div>
+    <div class="projet-card" style="border-left-color: var(--competence5);">
+        <h2 style="color: var(--competence5);">Projet 5</h2>
+        <a href="projet/projet5.html" style="background: var(--competence5);">Voir le projet 5</a>
+    </div>
+    <div class="projet-card" style="border-left-color: var(--competence6);">
+        <h2 style="color: var(--competence6);">Projet 6</h2>
+        <a href="projet/projet6.html" style="background: var(--competence6);">Voir le projet 6</a>
+    </div>
+</main>
+
+<!-- Bouton de retour à l'accueil -->
+<a href="index.html" class="home-button" title="Retour à l'accueil">⌂</a>
+
+
+<footer>
+    <p>&copy; PortFolio Sefil Matys</p>
+</footer>
+</body>
+</html>
