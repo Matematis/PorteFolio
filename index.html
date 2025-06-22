@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Accueil</title>
+    <style>
+        :root {
+            --presentation: #32a39e;
+            --projet: #00C9FF;
+            --competence1: #FF3B30;
+            --competence2: #FF9500;
+            --competence3: #FFCC00;
+            --competence4: #34C759;
+            --competence5: #007AFF;
+            --competence6: #AF52DE;
+            --dark: #1A1A1A;
+            --light: #F5F5F7;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, 
+                var(--presentation), 
+                var(--projet), 
+                var(--competence1), 
+                var(--competence2), 
+                var(--competence3), 
+                var(--competence4), 
+                var(--competence5), 
+                var(--competence6));
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease-out;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+        
+        main {
+            flex: 1;
+            padding: 3rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .card-header {
+            height: 10px;
+            background: var(--color);
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--color);
+        }
+        
+        .card-link {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--color);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: auto;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .home-button {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--dark);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: background 0.3s;
+        }
+        
+        .home-button:hover {
+            background: var(--presentation);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portfolio de Sefil Matys</h1>
+        <p class="subtitle">Accueil Portfolio</p>
+        <a href="index.html" class="home-button" title="Retour à l'accueil">⌂</a>
+    </header>
+    
+    <main>
+        <div class="cards-container">
+            <!-- Carte Présentation -->
+            <div class="card" style="--color: var(--presentation)">
+                <div class="card-header"></div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="image/data.jpeg" alt="photo" style="width:55px;height:55px;border-radius:50%;object-fit:cover;vertical-align:middle;">
+                    </div>
+                    <h2 class="card-title">Présentation</h2>
+                    <p>Découvrez mon parcours et mes compétences</p>
+                    <a href="presentation.html" class="card-link"></a>
+                </div>
+            </div>
+            
+            <!-- Carte Projet -->
+            <div class="card" style="--color: var(--projet)">
+                <div class="card-header"></div>
+                <div class="card-content">
+                    <div class="card-icon">💼</div>
+                    <h2 class="card-title">Projet</h2>
+                    <p>Explorez mes réalisations et travaux</p>
+                    <a href="projet.html" class="card-link"></a>
+                </div>
+            </div>
+            
+            <!-- Cartes Compétences -->
+            <div class="card" style="--color: var(--competence1)">
+                <div class="card-header"></div>
+                <div class="card-content">
+                    <div class="card-icon">1️⃣</div>
+                    <h2 class="card-title">Compétence 1</h2>
+                    <p>Réaliser un Développement d'application </p>
+                    <a href="C1.html" class="card-link"></a>
+                </div>
+            </div>
+            
+            <div class="card" style="--color: var(--competence2)">
+                <div class="card-header"></div>
+                <div class="card-content">
+                    <div class="card-icon">2️⃣</div>
+                    <h2 class="card-title">Compétence 2</h2>
+                    <p>Optimiser des applications informatiques</p>
+                    <a href="C2.html" class="card-link"></a>
+                </div>
+            </div>
+            
+            <div class="card" style="--color: var(--competence3)">
+                <div class="card-header"></div>
+                <div class="card-content">
+                    <div class="card-icon">3️⃣</div>
+                    <h2 class="card-title">Compétence 3</h2>
+                    <p> Administrer des Systèmes </p>
+                    <a href="C3.html" class="card-link"></a>
+                </div>
+            </div>
+            
+            <div class="card" style="--color: var(--competence4)">
+                <div class="card-header"></div>
+                <div class="card-content">
+                    <div class="card-icon">4️⃣</div>
+                    <h2 class="card-title">Compétence 4</h2>
+                    <p> Gérer des Données de l'information</p>
+                    <a href="C4.html" class="card-link"></a>
+                </div>
+            </div>
+            
+            <div class="card" style="--color: var(--competence5)">
+                <div class="card-header"></div>
+                <div class="card-content">
+                    <div class="card-icon">5️⃣</div>
+                    <h2 class="card-title">Compétence 5</h2>
+                    <p>Conduire un projet </p>
+                    <a href="C5.html" class="card-link"></a>
+                </div>
+            </div>
+            
+            <div class="card" style="--color: var(--competence6)">
+                <div class="card-header"></div>
+                <div class="card-content">
+                    <div class="card-icon">6️⃣</div>
+                    <h2 class="card-title">Compétence 6</h2>
+                    <p>Travailler dans une équipe informatique </p>
+                    <a href="C6.html" class="card-link"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Portfolio Sefil Matys</p>
+    </footer>
+</body>
+</html>

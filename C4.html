@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétence 4</title>
+    <link rel="stylesheet" href="Fichier.css">
+    <style>
+        :root {
+            --competence4: #4CAF50;
+            --competence4-light: #DFF5E3;
+            --competence4-dark: #388E3C;
+        }
+
+        body.competence4 {
+            background-color: #f9f9f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: var(--competence4);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: #333;
+            padding: 0.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: white;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        nav a.competence4 {
+            background-color: var(--competence4-dark);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        main p {
+            background-color: white;
+            padding: 1.2rem;
+            border-left: 4px solid var(--competence4);
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        main p:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.2);
+        }
+
+        h3 {
+            color: var(--competence4);
+            margin-top: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--competence4-light);
+        }
+
+        li {
+            background-color: white;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        main > a {
+            display: inline-block;
+            margin: 1.5rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--competence4);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+        }
+
+        main > a:hover {
+            background-color: var(--competence4-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(76, 175, 80, 0.4);
+        }
+
+        .home-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--competence4);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+            transition: all 0.3s ease;
+            z-index: 100;
+            border: 2px solid white;
+        }
+
+        .home-button:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.6);
+            background-color: var(--competence4-dark);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .home-button {
+            animation: pulse 2.5s ease infinite;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                padding: 0.8rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .home-button {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="competence4">
+
+<header>
+    <h1>Compétence 4</h1>
+    <p>Gérer des Données de l'information</p>
+</header>
+
+<nav>
+    <a href="presentation.html" class="presentation">Présentation</a>
+    <a href="projet.html" class="projet">Projet</a>
+    <a href="C1.html" class="competence1">Compétence 1</a>
+    <a href="C2.html" class="competence2">Compétence 2</a>
+    <a href="C3.html" class="competence3">Compétence 3</a>
+    <a href="C4.html" class="competence4">Compétence 4</a>
+    <a href="C5.html" class="competence5">Compétence 5</a>
+    <a href="C6.html" class="competence6">Compétence 6</a>
+</nav>
+
+<main>
+    <p>1. Il met à jour de manière pertinente une base de données relationnelle (Apprentissage Critique - AC1)</p>
+    <p>2. Il effectue des interrogations efficaces et affiche bien les résultats (AC1, AC2)</p>
+    <p>3. Il conçoit la BD en analysant le cahier des charges (AC3)</p>
+    <p>4. Il assure la cohérence et la qualité de la base de données (Composante Essentielle - CE)</p>
+    <p>5. Il s’appuie sur les modèles de données utilisés (CE)</p>
+
+    <h3>Explication des termes</h3>
+    <li>Modèle de données : structure permettant de représenter les données et leurs relations</li>
+
+    <a href="projet.html#competence4">Partie projet Compétence 4</a>
+</main>
+
+<a href="Index.html" class="home-button" title="Retour à l'accueil">⌂</a>
+
+<footer>
+    <p>&copy; PortFolio Sefil Matys</p>
+</footer>
+</body>
+</html>
