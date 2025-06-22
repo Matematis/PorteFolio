@@ -1,0 +1,21 @@
+# Commandes Git de base
+
+- `git init` : Initialise un nouveau dépôt Git
+- `git clone <url>` : Clone un dépôt distant
+- `git status` : Affiche l’état des fichiers (modifiés, ajoutés, supprimés)
+- `git add <fichier>` : Ajoute un fichier à l’index (staging area)
+- `git add .` : Ajoute tous les fichiers modifiés à l’index
+- `git commit -m "message"` : Enregistre les modifications avec un message
+- `git log` : Affiche l’historique des commits
+- `git diff` : Affiche les différences entre les fichiers modifiés et l’index
+- `git branch` : Liste les branches locales
+- `git checkout <branche>` : Bascule sur une branche
+- `git checkout -b <branche>` : Crée et bascule sur une nouvelle branche
+- `git merge <branche>` : Fusionne une branche dans la branche courante
+- `git pull` : Récupère et fusionne les modifications du dépôt distant
+- `git push` : Envoie les commits locaux vers le dépôt distant
+- `git remote -v` : Liste les dépôts distants
+- `git fetch` : Récupère les modifications du dépôt distant sans fusionner
+- `git rm <fichier>` : Supprime un fichier du projet et de l’index
+- `git reset <fichier>` : Retire un fichier de l’index (unstage)
+- `git stash` : Met de côté les modifications en cours
